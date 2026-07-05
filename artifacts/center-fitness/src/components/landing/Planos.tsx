@@ -106,6 +106,7 @@ export default function Planos() {
           >
             <h4 className="text-2xl font-display tracking-widest mb-3 group-hover:text-primary transition-colors">TRIMESTRAL</h4>
             <p className="text-4xl text-white font-display mb-1">3x de R$ 95,00</p>
+            <p className="text-sm text-muted-foreground mb-1">no cartão de crédito</p>
             <p className="text-lg text-muted-foreground">total R$ 285,00</p>
             <p className="text-xs text-muted-foreground mt-3 uppercase tracking-wider font-sans opacity-0 group-hover:opacity-100 transition-opacity">Toque para falar no WhatsApp</p>
           </a>
@@ -118,6 +119,7 @@ export default function Planos() {
           >
             <h4 className="text-2xl font-display tracking-widest mb-3 group-hover:text-primary transition-colors">SEMESTRAL</h4>
             <p className="text-4xl text-white font-display mb-1">5x de R$ 105,40</p>
+            <p className="text-sm text-muted-foreground mb-1">no cartão de crédito</p>
             <p className="text-lg text-muted-foreground">total R$ 527,00</p>
             <p className="text-sm text-primary font-semibold mt-2">ou à vista no Pix/dinheiro</p>
             <p className="text-xs text-muted-foreground mt-3 uppercase tracking-wider font-sans opacity-0 group-hover:opacity-100 transition-opacity">Toque para falar no WhatsApp</p>
