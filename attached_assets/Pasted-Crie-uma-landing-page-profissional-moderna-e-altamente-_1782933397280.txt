@@ -1,0 +1,119 @@
+Crie uma landing page profissional, moderna e altamente tecnológica para "Center Fitness", a maior academia do Vale do Acaraú, localizada em Acaraú, Ceará, Brasil — no mesmo patamar visual de academias de grande porte como Smart Fit, mas com identidade própria e distinta.
+
+IDENTIDADE VISUAL:
+- Base: cinza-azulado escuro tech, NÃO preto puro (#0D1117 fundo principal, #161B22 cards/seções, #1F2733 bordas/elementos elevados) — sensação de profundidade em camadas
+- Destaque: dourado #F5C400, com gradiente sutil para #FFD84D em botões, ícones e elementos de prova social, com leve glow atrás de elementos-chave
+- Texto principal: branco puro #FFFFFF para máxima legibilidade
+- Texto secundário: cinza claro #B8C1CC para hierarquia sem perder contraste
+- Proibido qualquer cor fora dessa paleta e PROIBIDO usar emojis em qualquer lugar — usar exclusivamente ícones Lucide (SVG) em todos os elementos: diferenciais, modalidades, badges, botões, redes sociais
+- Contraste mínimo AA de acessibilidade em todo texto
+
+TIPOGRAFIA:
+- "Bebas Neue" para headlines e números de destaque
+- "Barlow Condensed" para textos de apoio e botões
+
+NAVBAR FIXA (obrigatória):
+- Barra de navegação fixa no topo, com efeito glass/blur ao rolar a página
+- Logo "CENTER FITNESS" à esquerda (Bebas Neue)
+- Links de navegação: Início, Diferenciais, Modalidades, Planos, Equipe, Localização, Contato
+- Cada link faz scroll suave (smooth scroll) até a seção correspondente ao clicar
+- Link ativo (seção visível na tela) destacado visualmente em dourado
+- Em mobile: menu hambúrguer com mesmo comportamento de scroll suave
+- Botão CTA dourado "WhatsApp" sempre visível na navbar, inclusive no mobile
+
+ESTRUTURA DA PÁGINA:
+
+1. HERO
+- Background escuro com textura sutil de academia (overlay em gradiente, nunca preto puro)
+- Logo no topo
+- Headline (Bebas Neue, grande impacto): "TREINO SEM FILA. NA MAIOR DO VALE DO ACARAÚ."
+- Subtítulo: "Estrutura gigante, maquinário completo e acompanhamento profissional."
+- Dois CTAs: "QUERO CONHECER" (dourado, preenchido) e "VER PLANOS" (outline dourado)
+- Badges com ícones Lucide (não emojis): ícone de troféu + "86% de recomendação" | ícone de localização + "Centro, Acaraú" | ícone de relógio + "Aberto de segunda a domingo"
+
+2. DIFERENCIAIS
+- Grid de 4 cards com borda/glow dourado, cada um com ícone Lucide (não emoji):
+  → ícone de expansão/prédio: "Estrutura Gigante"
+  → ícone de haltere: "Maquinário Novo"
+  → ícone de usuário/professor: "Acompanhamento Profissional"
+  → ícone de luva de boxe: "Múltiplas Modalidades"
+
+3. MODALIDADES
+- Título: "O QUE VOCÊ VAI ENCONTRAR AQUI"
+- Cards premium com ícone Lucide e horários reais:
+  → MUSCULAÇÃO — Segunda a Sexta: 05:30 às 22:00 | Sábado: 07:00 às 14:00 | Domingo: 08:00 às 12:00
+  → MUAY THAI — Segunda, Quarta e Sexta: 17:00–18:00 (1ª turma) e 18:00–19:00 (2ª turma)
+  → KARATÊ — Terça: 18h e 19h | Quinta: 18h e 19h | Sexta: 19h e 20h
+  → JIU-JITSU — Segunda a Sábado: 12:00 | Segunda a Quinta: 20:00
+  → FUNCIONAL KIDS — Segunda e Quarta: 19:00
+
+4. PLANOS E PREÇOS
+- Título: "NOSSOS PLANOS"
+- Card em destaque especial com selo "OFERTA" (borda dourada mais forte, glow, levemente maior que os demais):
+  → MUSCULAÇÃO — R$ 100,00/mês (à vista, dinheiro ou Pix)
+  → MUSCULAÇÃO + QUALQUER MODALIDADE — R$ 150,00/mês (à vista, dinheiro ou Pix) — texto de apoio: "Musculação + Muay Thai, Karatê, Jiu-Jitsu ou Funcional Kids por um preço incrível!"
+  → Botão CTA dourado "QUERO ESSA PROMOÇÃO" em ambos, linkando para o WhatsApp
+- Planos regulares (cards padrão):
+  → Mensal: R$ 105,00 (cartão) | R$ 100,00 (Pix/dinheiro)
+  → Trimestral: R$ 94,99/mês (3x — total R$ 284,97)
+  → Semestral: R$ 105,40/mês (5x — total R$ 527,00)
+- Modalidades avulsas (cards menores/lista):
+  → Karatê — R$ 79,90/mês
+  → Jiu-Jitsu — R$ 79,90/mês
+  → Muay Thai — R$ 69,90/mês
+  → Funcional Kids — R$ 69,90/mês
+- Diárias (tabela ou lista compacta):
+  → Diária: R$ 20 | Semanal: R$ 50 | 2 semanas: R$ 75 | 3 semanas: R$ 85
+
+5. NOSSA EQUIPE (seção premium, alta credibilidade)
+- Título: "QUEM VAI TE TRANSFORMAR"
+- Subtítulo: "Profissionais qualificados, apaixonados pelo que fazem e prontos para te levar ao próximo nível."
+- Cards grandes estilo "atleta/coach premium": espaço de foto em destaque (moldura dourada sutil), nome em bold, especialidade/cargo abaixo
+- Efeito hover: card revela breve bio/certificação ao passar o mouse
+- Background da seção com textura escura diferenciada (padrão sutil, glow dourado)
+- Placeholders de foto claramente marcados: "[INSERIR FOTO DO PROFISSIONAL]", com campos para Nome, Cargo/Especialidade, CREF ou certificação (opcional), frase motivacional curta (opcional)
+- Mínimo de 4 a 6 slots de card
+- Ícone Lucide de verificação (check) em cada card, não emoji
+
+6. CALENDÁRIO DE TREINOS
+- Título: "CALENDÁRIO DE TREINOS"
+- Tabela ou grade visual organizada por modalidade, dias e horários, usando os dados exatos da seção 3
+- Visual limpo, linhas com hover sutil dourado, fácil leitura em mobile (transformar em cards empilhados no mobile se necessário)
+
+7. HORÁRIOS DE FUNCIONAMENTO
+- Segunda a Sexta: 05:30 às 22:00
+- Sábado: 07:00 às 14:00
+- Domingo: 08:00 às 12:00
+
+8. LOCALIZAÇÃO (com mapa interativo real)
+- Endereço: Rua Santo Antônio, 1548 — Centro, Acaraú/CE
+- Incorporar um mapa (iframe do Google Maps embed) mostrando a localização exata
+- Botão "COMO CHEGAR" com ícone Lucide de rota/localização, que ao ser clicado abre o Google Maps em nova aba já com a rota traçada até o endereço, usando o link: https://www.google.com/maps/dir/?api=1&destination=Rua+Santo+Antônio,+1548,+Centro,+Acaraú,+CE
+- O mapa embutido também deve ser clicável e redirecionar para o Google Maps
+
+9. CONTATO / CTA FINAL
+- Headline: "PRONTO PARA COMEÇAR?"
+- Subtítulo: "Fale com a gente agora e garanta seu plano."
+- Botão "FALAR NO WHATSAPP" com ícone Lucide do WhatsApp, dourado, linkando para: https://wa.me/5588997826023
+- Botão "VER NO INSTAGRAM" com ícone Lucide do Instagram, outline dourado, linkando para: https://instagram.com/academia_center_fitness
+- Ambos os botões abrem em nova aba
+
+10. FOOTER
+- Fundo #0D1117, logo, endereço completo, telefone/WhatsApp, ícones Lucide de redes sociais (WhatsApp e Instagram) linkados
+- Frase: "Invista na sua melhor versão."
+- Copyright Center Fitness
+
+DIRETRIZES TÉCNICAS:
+- Mobile-first, totalmente responsivo
+- Navbar fixa com scroll suave (smooth scroll) para todas as âncoras
+- Animações de entrada suaves (fade-in, slide-up) ao rolar cada seção
+- Leve efeito parallax no hero
+- Botões e cards com glow dourado sutil no hover, nunca abrupto
+- Cards da equipe com efeito de revelação (flip ou overlay) no hover
+- Placeholders de foto claramente identificados e fáceis de substituir depois
+- Mapa do Google Maps embutido e funcional, com botão de rota direto
+- Nenhum emoji em nenhum lugar da página — somente ícones Lucide (SVG)
+- Código limpo em React + Tailwind CSS
+- Contraste de acessibilidade mínimo AA em todo texto
+
+Gere a página completa, seção por seção, com esse nível de acabamento — precisa parecer o site de uma rede de academia de peso nacional, com todos os dados reais fornecidos acima aplicados corretamente.
