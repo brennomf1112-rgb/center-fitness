@@ -2,6 +2,7 @@ import React from "react";
 import { Dumbbell, Swords, Shield, CircleDot, Star, Zap, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gym1 from "@assets/1_1782935891188.jpeg";
+import funcionalAdultoPhoto from "@assets/watermarked_img_13372021367771172073_1783239480198.jpg";
 import muayThaiPhoto from "@assets/WhatsApp_Image_2026-07-01_at_17.02.51_1782936252193.jpeg";
 import jiujitsuPhoto from "@assets/360_F_281610952_5haqUMoAn3Gvtqf0ODjhGF2gItT4sHin_1782936796232.webp";
 import karatePhoto from "@assets/607d2c_655ab59adcf64c0eb97be90ea61f1895~mv2_1782936859786.webp";
@@ -185,42 +186,50 @@ export default function Modalidades() {
             </div>
           </div>
 
-          {/* FUNCIONAL ADULTO */}
+          {/* FUNCIONAL ADULTO — em oferta */}
           <div
-            className="relative bg-card border-2 border-primary/40 rounded-xl overflow-hidden group hover:border-primary hover:shadow-[0_0_40px_-5px_rgba(245,196,0,0.25)] transition-all duration-500"
+            className="relative bg-card border-2 border-primary rounded-xl overflow-hidden group hover:shadow-[0_0_50px_-5px_rgba(245,196,0,0.35)] transition-all duration-500"
             data-testid="modalidade-card-adulto"
           >
-            <div className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground text-xs font-display tracking-[0.2em] px-3 py-1 rounded-full shadow-[0_0_12px_rgba(245,196,0,0.5)]">
-              NOVIDADE
+            {/* Badge OFERTA */}
+            <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
+              <span className="bg-primary text-primary-foreground text-xs font-display tracking-[0.2em] px-3 py-1 rounded-full shadow-[0_0_16px_rgba(245,196,0,0.7)] animate-pulse">
+                🔥 OFERTA ESPECIAL
+              </span>
+              <span className="bg-green-500 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow">
+                MATRÍCULA GRÁTIS
+              </span>
             </div>
 
             <div className="flex flex-col md:flex-row-reverse">
-              <div className="w-full md:w-2/5 h-64 md:h-auto bg-gradient-to-br from-primary/20 via-card to-background relative overflow-hidden shrink-0 flex items-center justify-center">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,196,0,0.12)_0%,transparent_70%)]" />
-                <div className="flex flex-col items-center gap-3 relative z-10">
-                  <Zap className="w-24 h-24 text-primary opacity-50" strokeWidth={1} />
-                  <p className="text-primary/60 font-display tracking-widest text-sm">EM BREVE</p>
-                </div>
+              {/* Foto real */}
+              <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden shrink-0">
+                <img
+                  src={funcionalAdultoPhoto}
+                  alt="Funcional Adulto Center Fitness"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-card/80 hidden md:block" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
               </div>
 
               <div className="flex flex-col justify-center p-8 md:p-10 flex-1">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 shrink-0 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-14 h-14 shrink-0 bg-primary/20 border border-primary/50 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                     <Zap className="w-8 h-8 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-3xl md:text-4xl font-display tracking-widest text-white">FUNCIONAL ADULTO</h3>
-                    <p className="text-primary text-xs font-sans font-bold uppercase tracking-widest mt-1">Nova modalidade</p>
+                    <p className="text-primary text-xs font-sans font-bold uppercase tracking-widest mt-1">Nova modalidade • Vagas limitadas</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground font-sans text-lg mb-5 flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse shrink-0" />
-                  Turmas sendo formadas — em breve!
+                <p className="text-muted-foreground font-sans text-lg mb-2">
+                  Treinamento funcional de alta intensidade para adultos de todos os níveis.
                 </p>
-                <p className="text-white/60 font-sans text-sm leading-relaxed border-l-2 border-primary pl-3 mb-1">
-                  Treinamento funcional de alta intensidade para adultos. Fique ligado nos próximos horários.
+                <p className="text-white/60 font-sans text-sm leading-relaxed border-l-2 border-primary pl-3 mb-5">
+                  Melhore força, resistência e mobilidade com acompanhamento profissional em grupo.
                 </p>
-                <WAButton message="Olá! Tenho interesse no Funcional Adulto da Center Fitness. Quero ser avisado assim que as turmas forem abertas! ⚡" />
+                <WAButton message="Olá! Vi que o Funcional Adulto está em oferta especial na Center Fitness! Quero saber mais sobre a matrícula e horários. ⚡🔥" />
               </div>
             </div>
           </div>
