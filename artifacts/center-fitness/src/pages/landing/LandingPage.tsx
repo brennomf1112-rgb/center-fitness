@@ -5,6 +5,7 @@ import Diferenciais from "../../components/landing/Diferenciais";
 import Modalidades from "../../components/landing/Modalidades";
 import Planos from "../../components/landing/Planos";
 import Equipe from "../../components/landing/Equipe";
+import Galeria from "../../components/landing/Galeria";
 import Parceiros from "../../components/landing/Parceiros";
 import Calendario from "../../components/landing/Calendario";
 import Localizacao from "../../components/landing/Localizacao";
@@ -24,6 +25,7 @@ export default function LandingPage() {
         <Modalidades />
         <Planos />
         <Equipe />
+        <Galeria />
         <Parceiros />
         <Calendario />
         <Localizacao />
