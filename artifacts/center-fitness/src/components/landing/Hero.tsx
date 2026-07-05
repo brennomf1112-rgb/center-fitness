@@ -32,9 +32,9 @@ export default function Hero() {
           <img
             src={logoImg}
             alt="Center Fitness"
-            className="h-56 md:h-80 lg:h-96 w-auto object-contain"
+            className="h-64 md:h-96 lg:h-[28rem] w-auto object-contain"
             style={{
-              filter: "drop-shadow(0 0 48px rgba(245,196,0,0.85)) drop-shadow(0 0 16px rgba(245,196,0,0.6)) saturate(1.4) brightness(1.15)",
+              filter: "drop-shadow(0 4px 24px rgba(0,0,0,0.7)) brightness(1.05) contrast(1.05)",
             }}
           />
         </div>

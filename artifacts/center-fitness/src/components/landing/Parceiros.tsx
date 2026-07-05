@@ -1,4 +1,6 @@
 import React from "react";
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const PARCEIROS = [
   {
@@ -11,7 +13,7 @@ const PARCEIROS = [
   },
   {
     name: "Porto Seguro Supermercados",
-    logo: "/parceiros/porto-seguro.png",
+    logo: "/parceiros/porto-seguro-nobg.png",
   },
   {
     name: "Supermercado Pinheiro",
@@ -27,24 +29,43 @@ export default function Parceiros() {
           Parceiros da Academia
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-items-center mb-12">
           {PARCEIROS.map((p) => (
             <div
               key={p.name}
               className="flex flex-col items-center gap-3 group"
             >
-              <div className="h-20 flex items-center justify-center filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-400">
+              <div className="h-28 flex items-center justify-center transition-all duration-400">
                 <img
                   src={p.logo}
                   alt={`Logo ${p.name}`}
-                  className="max-h-20 max-w-[160px] w-auto object-contain"
+                  className="max-h-28 max-w-[200px] w-auto object-contain"
                 />
               </div>
-              <p className="text-muted-foreground group-hover:text-white font-sans text-xs text-center tracking-wide transition-colors duration-300">
+              <p className="text-white font-sans text-sm text-center tracking-wide font-semibold">
                 {p.name}
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA para novos parceiros */}
+        <div className="border border-primary/30 rounded-sm p-6 text-center bg-background/50">
+          <p className="text-white font-display text-xl md:text-2xl tracking-wider mb-2">
+            Venha ser parceiro você também!
+          </p>
+          <p className="text-muted-foreground font-sans text-sm mb-5">
+            Leve sua marca para dentro da maior academia do Vale do Acaraú.
+          </p>
+          <Button
+            asChild
+            className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_15px_rgba(245,196,0,0.4)] transition-all uppercase tracking-widest font-bold font-sans"
+          >
+            <a href="https://wa.me/5588997826023" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Falar pelo WhatsApp
+            </a>
+          </Button>
         </div>
       </div>
     </section>

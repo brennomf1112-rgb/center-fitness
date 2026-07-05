@@ -53,7 +53,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <a href="#inicio" className="flex items-center" data-testid="nav-logo">
-          <img src={logoImg} alt="Center Fitness" className="h-16 w-auto object-contain" />
+          <img src={logoImg} alt="Center Fitness" className="h-20 w-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}
