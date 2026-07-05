@@ -13,7 +13,7 @@ const PARCEIROS = [
   },
   {
     name: "Porto Seguro Supermercados",
-    logo: "/parceiros/porto-seguro-nobg.png",
+    logo: "/parceiros/porto-seguro-new.png",
   },
   {
     name: "Supermercado Pinheiro",
