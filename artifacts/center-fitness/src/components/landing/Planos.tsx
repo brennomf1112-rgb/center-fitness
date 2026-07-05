@@ -12,8 +12,8 @@ function waLink(msg: string) {
 const LINKS = {
   oferta150: waLink("Olá! Tenho interesse na OFERTA Musculação + Modalidade por R$ 150,00/mês (Musculação + Muay Thai, Karatê, Jiu-Jitsu ou Funcional Kids). Pode me dar mais informações?"),
   mensal: waLink("Olá! Tenho interesse no Plano Mensal de Musculação (R$ 105,00 cartão / R$ 100,00 Pix). Pode me dar mais informações?"),
-  trimestral: waLink("Olá! Tenho interesse no Plano Trimestral de Musculação por R$ 94,99/mês (3x — total R$ 284,97). Pode me dar mais informações?"),
-  semestral: waLink("Olá! Tenho interesse no Plano Semestral de Musculação por R$ 105,40/mês (5x — total R$ 527,00). Pode me dar mais informações?"),
+  trimestral: waLink("Olá! Tenho interesse no Plano Trimestral de Musculação (até 3x de R$ 95,00). Pode me dar mais informações?"),
+  semestral: waLink("Olá! Tenho interesse no Plano Semestral de Musculação (até 5x de R$ 105,40 ou valor à vista no Pix/dinheiro). Pode me dar mais informações?"),
   karate: waLink("Olá! Tenho interesse no Plano de Karatê por R$ 79,90/mês. Pode me dar mais informações?"),
   jiujitsu: waLink("Olá! Tenho interesse no Plano de Jiu-Jitsu por R$ 79,90/mês. Pode me dar mais informações?"),
   muaythai: waLink("Olá! Tenho interesse no Plano de Muay Thai por R$ 85,00/mês. Pode me dar mais informações?"),
@@ -105,8 +105,8 @@ export default function Planos() {
             data-testid="btn-plano-trimestral"
           >
             <h4 className="text-2xl font-display tracking-widest mb-3 group-hover:text-primary transition-colors">TRIMESTRAL</h4>
-            <p className="text-4xl text-white font-display mb-1">R$ 94,99<span className="text-lg text-muted-foreground font-sans">/mês</span></p>
-            <p className="text-lg text-muted-foreground">3x — total R$ 284,97</p>
+            <p className="text-4xl text-white font-display mb-1">3x de R$ 95,00</p>
+            <p className="text-lg text-muted-foreground">total R$ 285,00</p>
             <p className="text-xs text-muted-foreground mt-3 uppercase tracking-wider font-sans opacity-0 group-hover:opacity-100 transition-opacity">Toque para falar no WhatsApp</p>
           </a>
           <a
@@ -117,8 +117,9 @@ export default function Planos() {
             data-testid="btn-plano-semestral"
           >
             <h4 className="text-2xl font-display tracking-widest mb-3 group-hover:text-primary transition-colors">SEMESTRAL</h4>
-            <p className="text-4xl text-white font-display mb-1">R$ 105,40<span className="text-lg text-muted-foreground font-sans">/mês</span></p>
-            <p className="text-lg text-muted-foreground">5x — total R$ 527,00</p>
+            <p className="text-4xl text-white font-display mb-1">5x de R$ 105,40</p>
+            <p className="text-lg text-muted-foreground">total R$ 527,00</p>
+            <p className="text-sm text-primary font-semibold mt-2">ou à vista no Pix/dinheiro</p>
             <p className="text-xs text-muted-foreground mt-3 uppercase tracking-wider font-sans opacity-0 group-hover:opacity-100 transition-opacity">Toque para falar no WhatsApp</p>
           </a>
         </div>
