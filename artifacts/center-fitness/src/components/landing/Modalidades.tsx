@@ -47,7 +47,7 @@ export default function Modalidades() {
             data-testid="modalidade-card-musculacao"
           >
             <div className="flex flex-col md:flex-row">
-              <div className="relative w-full md:w-2/5 h-56 md:h-auto overflow-hidden shrink-0">
+              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
                 <img src={gym1} alt="Musculação Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden md:block" />
@@ -76,7 +76,7 @@ export default function Modalidades() {
             data-testid="modalidade-card-muaythai"
           >
             <div className="flex flex-col md:flex-row-reverse">
-              <div className="relative w-full md:w-2/5 h-56 md:h-auto overflow-hidden shrink-0">
+              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
                 <img src={muayThaiPhoto} alt="Turma de Muay Thai Center Fitness"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-card/80 hidden md:block" />
@@ -106,7 +106,7 @@ export default function Modalidades() {
               className="relative bg-card border border-border rounded-xl overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_30px_-5px_rgba(245,196,0,0.15)] transition-all duration-500"
               data-testid="modalidade-card-karate"
             >
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={karatePhoto} alt="Karatê Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
@@ -132,7 +132,7 @@ export default function Modalidades() {
               className="relative bg-card border border-border rounded-xl overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_30px_-5px_rgba(245,196,0,0.15)] transition-all duration-500"
               data-testid="modalidade-card-jiujitsu"
             >
-              <div className="relative h-52 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={jiujitsuPhoto} alt="Jiu-Jitsu Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
@@ -159,7 +159,7 @@ export default function Modalidades() {
             data-testid="modalidade-card-kids"
           >
             <div className="flex flex-col md:flex-row">
-              <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden shrink-0">
+              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
                 <img src={kidsPhoto} alt="Funcional Kids Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden md:block" />
@@ -203,7 +203,7 @@ export default function Modalidades() {
 
             <div className="flex flex-col md:flex-row-reverse">
               {/* Foto real */}
-              <div className="relative w-full md:w-2/5 h-64 md:h-auto overflow-hidden shrink-0">
+              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
                 <img
                   src={funcionalAdultoPhoto}
                   alt="Funcional Adulto Center Fitness"

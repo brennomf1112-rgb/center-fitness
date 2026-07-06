@@ -13,26 +13,26 @@ export default function Galeria() {
         <p className="text-primary font-display tracking-[0.35em] text-lg">NOSSA ESTRUTURA</p>
       </div>
 
-      {/* Foto destaque — largura total, altura generosa */}
-      <div className="relative w-full overflow-hidden group" style={{ aspectRatio: "16/7" }}>
+      {/* Foto destaque — proporção adaptada ao mobile */}
+      <div className="relative w-full overflow-hidden group" style={{ aspectRatio: "16/9" }}>
         <img
           src={gym1}
           alt="Center Fitness — visão completa dos dois galpões"
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-        <div className="absolute bottom-8 left-8 right-8 flex flex-col gap-2">
-          <span className="text-white font-display tracking-widest text-2xl md:text-4xl drop-shadow-lg">
+        <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 flex flex-col gap-1">
+          <span className="text-white font-display tracking-widest text-lg md:text-4xl drop-shadow-lg">
             2 GALPÕES • +800m² DE ESPAÇO
           </span>
-          <span className="text-primary font-sans text-sm md:text-lg tracking-wider drop-shadow">
+          <span className="text-primary font-sans text-xs md:text-lg tracking-wider drop-shadow">
             Estrutura gigante para você treinar com liberdade
           </span>
         </div>
         <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/30 transition-all duration-500 pointer-events-none" />
       </div>
 
-      {/* Grid das outras 5 fotos — proporção preservada */}
+      {/* Grid das outras 5 fotos */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-1 mt-1">
         {[
           { src: gym2, alt: "Maquinário completo — salão musculação" },

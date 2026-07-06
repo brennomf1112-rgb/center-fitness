@@ -1,16 +1,16 @@
 import React from "react";
-import { Building2, Dumbbell, UserCheck, Layers } from "lucide-react";
+import { Building2, Dumbbell, UserCheck, Layers, Lock, Activity } from "lucide-react";
 
 const DIFERENCIAIS = [
   {
     icon: Building2,
     title: "Estrutura Gigante",
-    description: "Espaço amplo para treinar com liberdade, sem espera por equipamentos.",
+    description: "2 galpões com +800m² de espaço para treinar com liberdade, sem espera por equipamentos.",
   },
   {
     icon: Dumbbell,
-    title: "Maquinário Novo",
-    description: "Equipamentos modernos e em perfeitas condições para o seu treino.",
+    title: "Maquinário Completo",
+    description: "Várias máquinas modernas e em perfeitas condições para o seu treino.",
   },
   {
     icon: UserCheck,
@@ -20,7 +20,17 @@ const DIFERENCIAIS = [
   {
     icon: Layers,
     title: "Múltiplas Modalidades",
-    description: "Musculação, Muay Thai, Karatê, Jiu-Jitsu e Funcional Kids.",
+    description: "Musculação, Muay Thai, Karatê, Jiu-Jitsu, Funcional Kids e Funcional Adulto.",
+  },
+  {
+    icon: Lock,
+    title: "Armários Individuais",
+    description: "Armários individuais com chave para guardar seus pertences com segurança.",
+  },
+  {
+    icon: Activity,
+    title: "Avaliação Grátis",
+    description: "Avaliação física e bioimpedância totalmente grátis para todos os alunos.",
   },
 ];
 
@@ -32,7 +42,7 @@ export default function Diferenciais() {
           POR QUE A CENTER FITNESS?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {DIFERENCIAIS.map((item, i) => (
             <div
               key={i}
