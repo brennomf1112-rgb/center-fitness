@@ -13,16 +13,16 @@ export default function Galeria() {
         <p className="text-primary font-display tracking-[0.35em] text-lg">NOSSA ESTRUTURA</p>
       </div>
 
-      {/* Foto destaque — proporção adaptada ao mobile */}
-      <div className="relative w-full overflow-hidden group" style={{ aspectRatio: "16/9" }}>
+      {/* Foto destaque — 16:9 no mobile, um pouco mais alta no desktop */}
+      <div className="relative w-full overflow-hidden group aspect-video md:aspect-[21/9]">
         <img
           src={gym1}
           alt="Center Fitness — visão completa dos dois galpões"
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 flex flex-col gap-1">
-          <span className="text-white font-display tracking-widest text-lg md:text-4xl drop-shadow-lg">
+        <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 flex flex-col gap-1">
+          <span className="text-white font-display tracking-widest text-base md:text-4xl drop-shadow-lg">
             2 GALPÕES • +800m² DE ESPAÇO
           </span>
           <span className="text-primary font-sans text-xs md:text-lg tracking-wider drop-shadow">
@@ -32,8 +32,10 @@ export default function Galeria() {
         <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/30 transition-all duration-500 pointer-events-none" />
       </div>
 
-      {/* Grid das outras 5 fotos */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-1 mt-1">
+      {/* Grid das outras 5 fotos
+          Mobile: 1 coluna (foto larga, sem corte)
+          Desktop: 5 colunas */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-1 mt-1">
         {[
           { src: gym2, alt: "Maquinário completo — salão musculação" },
           { src: gym3, alt: "Academia Center Fitness — movimento na pista" },
@@ -43,8 +45,7 @@ export default function Galeria() {
         ].map((img, i) => (
           <div
             key={i}
-            className={`relative overflow-hidden group ${i === 4 ? "col-span-2 md:col-span-1" : ""}`}
-            style={{ aspectRatio: "4/3" }}
+            className="relative overflow-hidden group aspect-video"
           >
             <img
               src={img.src}
@@ -59,25 +60,25 @@ export default function Galeria() {
 
       {/* Faixa de estatísticas */}
       <div className="bg-card border-y border-border py-6 px-4">
-        <div className="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-around gap-6 text-center">
+        <div className="container mx-auto max-w-5xl grid grid-cols-2 sm:flex sm:flex-row items-center justify-around gap-4 text-center">
           <div>
-            <p className="text-4xl font-display text-primary">2</p>
-            <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider mt-1">Galpões</p>
+            <p className="text-3xl md:text-4xl font-display text-primary">2</p>
+            <p className="text-muted-foreground font-sans text-xs md:text-sm uppercase tracking-wider mt-1">Galpões</p>
           </div>
           <div className="hidden sm:block w-px h-10 bg-border" />
           <div>
-            <p className="text-4xl font-display text-primary">+800m²</p>
-            <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider mt-1">de Espaço Total</p>
+            <p className="text-3xl md:text-4xl font-display text-primary">+800m²</p>
+            <p className="text-muted-foreground font-sans text-xs md:text-sm uppercase tracking-wider mt-1">de Espaço Total</p>
           </div>
           <div className="hidden sm:block w-px h-10 bg-border" />
           <div>
-            <p className="text-4xl font-display text-primary">Várias</p>
-            <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider mt-1">Máquinas Incríveis</p>
+            <p className="text-3xl md:text-4xl font-display text-primary">Várias</p>
+            <p className="text-muted-foreground font-sans text-xs md:text-sm uppercase tracking-wider mt-1">Máquinas Incríveis</p>
           </div>
           <div className="hidden sm:block w-px h-10 bg-border" />
           <div>
-            <p className="text-4xl font-display text-primary">7 dias</p>
-            <p className="text-muted-foreground font-sans text-sm uppercase tracking-wider mt-1">por semana</p>
+            <p className="text-3xl md:text-4xl font-display text-primary">7 dias</p>
+            <p className="text-muted-foreground font-sans text-xs md:text-sm uppercase tracking-wider mt-1">por semana</p>
           </div>
         </div>
       </div>

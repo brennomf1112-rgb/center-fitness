@@ -16,18 +16,20 @@ export default function Equipe() {
           </p>
         </div>
 
-        {/* Team Photo Banner */}
+        {/* Team Photo — proporção preservada no mobile */}
         <div className="relative rounded-2xl overflow-hidden border border-primary/30 shadow-[0_0_40px_rgba(245,196,0,0.12)]">
-          <img
-            src={teamPhoto}
-            alt="Equipe Center Fitness"
-            className="w-full h-[420px] md:h-[560px] object-cover object-center"
-            data-testid="equipe-team-photo"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <p className="text-primary font-display text-2xl md:text-3xl tracking-[0.25em] mb-1">A NOSSA EQUIPE</p>
-            <p className="text-white/80 font-sans text-base md:text-lg">Unidos pelo mesmo objetivo: a sua transformação.</p>
+          <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+            <img
+              src={teamPhoto}
+              alt="Equipe Center Fitness"
+              className="w-full h-full object-cover object-center"
+              data-testid="equipe-team-photo"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
+              <p className="text-primary font-display text-xl md:text-3xl tracking-[0.25em] mb-1">A NOSSA EQUIPE</p>
+              <p className="text-white/80 font-sans text-sm md:text-lg">Unidos pelo mesmo objetivo: a sua transformação.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -29,6 +29,25 @@ function WAButton({ message }: { message: string }) {
   );
 }
 
+/* Wrapper para cards horizontais (foto + texto lado a lado no desktop,
+   foto em cima no mobile sem corte). */
+function HCardPhoto({ src, alt, reverse = false }: { src: string; alt: string; reverse?: boolean }) {
+  return (
+    <div className={`relative w-full md:w-2/5 shrink-0 overflow-hidden ${reverse ? "md:order-last" : ""}`}>
+      {/* aspect-video no mobile = 16:9 sem corte; no desktop a altura segue o flex */}
+      <div className="relative w-full aspect-video md:aspect-auto md:h-full min-h-0">
+        <img
+          src={src}
+          alt={alt}
+          className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className={`absolute inset-0 hidden md:block ${reverse ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-transparent via-transparent to-card/80`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
+      </div>
+    </div>
+  );
+}
+
 export default function Modalidades() {
   return (
     <section id="modalidades" className="py-14 bg-background relative overflow-hidden" data-testid="section-modalidades">
@@ -47,23 +66,18 @@ export default function Modalidades() {
             data-testid="modalidade-card-musculacao"
           >
             <div className="flex flex-col md:flex-row">
-              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
-                <img src={gym1} alt="Musculação Center Fitness"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden md:block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
-              </div>
-              <div className="flex flex-col justify-center p-8 md:p-10 flex-1">
+              <HCardPhoto src={gym1} alt="Musculação Center Fitness" />
+              <div className="flex flex-col justify-center p-6 md:p-10 flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 shrink-0 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Dumbbell className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-display tracking-widest text-white">MUSCULAÇÃO</h3>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-widest text-white">MUSCULAÇÃO</h3>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <p className="text-muted-foreground font-sans text-lg">Seg–Sex: 05:30 às 22:00</p>
-                  <p className="text-muted-foreground font-sans text-lg">Sáb: 07:00 às 14:00</p>
-                  <p className="text-muted-foreground font-sans text-lg">Dom: 08:00 às 12:00</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">Seg–Sex: 05:30 às 22:00</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">Sáb: 07:00 às 14:00</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">Dom: 08:00 às 12:00</p>
                 </div>
                 <WAButton message="Olá! Tenho interesse em fazer Musculação na Center Fitness. Pode me passar mais informações sobre planos e matrícula? 💪" />
               </div>
@@ -75,38 +89,32 @@ export default function Modalidades() {
             className="relative bg-card border border-border rounded-xl overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_40px_-5px_rgba(245,196,0,0.15)] transition-all duration-500"
             data-testid="modalidade-card-muaythai"
           >
-            <div className="flex flex-col md:flex-row-reverse">
-              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
-                <img src={muayThaiPhoto} alt="Turma de Muay Thai Center Fitness"
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-card/80 hidden md:block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
-              </div>
-              <div className="flex flex-col justify-center p-8 md:p-10 flex-1">
+            <div className="flex flex-col md:flex-row">
+              <HCardPhoto src={muayThaiPhoto} alt="Turma de Muay Thai Center Fitness" reverse />
+              <div className="flex flex-col justify-center p-6 md:p-10 flex-1 md:order-first">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 shrink-0 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Swords className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-display tracking-widest text-white">MUAY THAI</h3>
+                  <h3 className="text-2xl md:text-4xl font-display tracking-widest text-white">MUAY THAI</h3>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <p className="text-muted-foreground font-sans text-lg">Seg / Qua / Sex</p>
-                  <p className="text-muted-foreground font-sans text-lg">1ª turma: 17:00–18:00</p>
-                  <p className="text-muted-foreground font-sans text-lg">2ª turma: 18:00–19:00</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">Seg / Qua / Sex</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">1ª turma: 17:00–18:00</p>
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">2ª turma: 18:00–19:00</p>
                 </div>
                 <WAButton message="Olá! Tenho interesse nas aulas de Muay Thai da Center Fitness. Quais turmas ainda têm vagas? 🥊" />
               </div>
             </div>
           </div>
 
-          {/* KARATÊ + JIU-JITSU */}
+          {/* KARATÊ + JIU-JITSU — cards verticais, proporção 16:9 no mobile */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* KARATÊ */}
             <div
               className="relative bg-card border border-border rounded-xl overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_30px_-5px_rgba(245,196,0,0.15)] transition-all duration-500"
               data-testid="modalidade-card-karate"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative w-full aspect-video overflow-hidden">
                 <img src={karatePhoto} alt="Karatê Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
@@ -127,12 +135,11 @@ export default function Modalidades() {
               </div>
             </div>
 
-            {/* JIU-JITSU */}
             <div
               className="relative bg-card border border-border rounded-xl overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_30px_-5px_rgba(245,196,0,0.15)] transition-all duration-500"
               data-testid="modalidade-card-jiujitsu"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative w-full aspect-video overflow-hidden">
                 <img src={jiujitsuPhoto} alt="Jiu-Jitsu Center Fitness"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
@@ -159,24 +166,19 @@ export default function Modalidades() {
             data-testid="modalidade-card-kids"
           >
             <div className="flex flex-col md:flex-row">
-              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
-                <img src={kidsPhoto} alt="Funcional Kids Center Fitness"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden md:block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
-              </div>
-              <div className="flex flex-col justify-center p-8 md:p-10 flex-1">
+              <HCardPhoto src={kidsPhoto} alt="Funcional Kids Center Fitness" />
+              <div className="flex flex-col justify-center p-6 md:p-10 flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 shrink-0 bg-primary/10 border border-primary/30 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Star className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-display tracking-widest text-white">FUNCIONAL KIDS</h3>
+                    <h3 className="text-2xl md:text-4xl font-display tracking-widest text-white">FUNCIONAL KIDS</h3>
                     <p className="text-primary text-xs font-sans font-bold uppercase tracking-widest mt-1">Para crianças</p>
                   </div>
                 </div>
-                <div className="flex flex-col gap-1.5 mb-5">
-                  <p className="text-muted-foreground font-sans text-lg">Segunda e Quarta: 19:00</p>
+                <div className="flex flex-col gap-1.5 mb-4">
+                  <p className="text-muted-foreground font-sans text-base md:text-lg">Segunda e Quarta: 19:00</p>
                 </div>
                 <p className="text-white/60 font-sans text-sm leading-relaxed border-l-2 border-primary pl-3 mb-1">
                   Coordenação motora, disciplina e amor pelo esporte desde cedo.
@@ -191,7 +193,6 @@ export default function Modalidades() {
             className="relative bg-card border-2 border-primary rounded-xl overflow-hidden group hover:shadow-[0_0_50px_-5px_rgba(245,196,0,0.35)] transition-all duration-500"
             data-testid="modalidade-card-adulto"
           >
-            {/* Badge OFERTA */}
             <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
               <span className="bg-primary text-primary-foreground text-xs font-display tracking-[0.2em] px-3 py-1 rounded-full shadow-[0_0_16px_rgba(245,196,0,0.7)] animate-pulse">
                 🔥 OFERTA ESPECIAL
@@ -201,32 +202,22 @@ export default function Modalidades() {
               </span>
             </div>
 
-            <div className="flex flex-col md:flex-row-reverse">
-              {/* Foto real */}
-              <div className="relative w-full md:w-2/5 aspect-video md:aspect-auto md:h-auto overflow-hidden shrink-0">
-                <img
-                  src={funcionalAdultoPhoto}
-                  alt="Funcional Adulto Center Fitness"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-card/80 hidden md:block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent md:hidden" />
-              </div>
-
-              <div className="flex flex-col justify-center p-8 md:p-10 flex-1">
+            <div className="flex flex-col md:flex-row">
+              <HCardPhoto src={funcionalAdultoPhoto} alt="Funcional Adulto Center Fitness" reverse />
+              <div className="flex flex-col justify-center p-6 md:p-10 flex-1 md:order-first">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-14 h-14 shrink-0 bg-primary/20 border border-primary/50 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors">
                     <Zap className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-display tracking-widest text-white">FUNCIONAL ADULTO</h3>
+                    <h3 className="text-2xl md:text-4xl font-display tracking-widest text-white">FUNCIONAL ADULTO</h3>
                     <p className="text-primary text-xs font-sans font-bold uppercase tracking-widest mt-1">Nova modalidade • Vagas limitadas</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground font-sans text-lg mb-2">
+                <p className="text-muted-foreground font-sans text-base md:text-lg mb-2">
                   Treinamento funcional de alta intensidade para adultos de todos os níveis.
                 </p>
-                <p className="text-white/60 font-sans text-sm leading-relaxed border-l-2 border-primary pl-3 mb-5">
+                <p className="text-white/60 font-sans text-sm leading-relaxed border-l-2 border-primary pl-3 mb-4">
                   Melhore força, resistência e mobilidade com acompanhamento profissional em grupo.
                 </p>
                 <WAButton message="Olá! Vi que o Funcional Adulto está em oferta especial na Center Fitness! Quero saber mais sobre a matrícula e horários. ⚡🔥" />
