@@ -40,10 +40,18 @@ export default function Calendario() {
                 <td className="p-4 text-muted-foreground">Segunda a Sábado<br/>Segunda a Quinta</td>
                 <td className="p-4 text-white">12:00<br/>20:00</td>
               </tr>
-              <tr className="hover:bg-primary/5 transition-colors">
+              <tr className="hover:bg-primary/5 transition-colors border-b border-border/50">
                 <td className="p-4 font-bold text-primary tracking-wider uppercase">Funcional Kids</td>
                 <td className="p-4 text-muted-foreground">Segunda e Quarta</td>
                 <td className="p-4 text-white">19:00</td>
+              </tr>
+              <tr className="hover:bg-primary/5 transition-colors">
+                <td className="p-4 font-bold text-primary tracking-wider uppercase">
+                  Funcional Adulto
+                  <span className="ml-2 inline-block bg-primary/20 text-primary text-xs font-sans px-2 py-0.5 rounded-full tracking-normal normal-case">Oferta</span>
+                </td>
+                <td className="p-4 text-muted-foreground">Consultar</td>
+                <td className="p-4 text-white">Consultar disponibilidade</td>
               </tr>
             </tbody>
           </table>
@@ -88,6 +96,12 @@ export default function Calendario() {
           <div className="bg-background border border-border p-5 rounded-lg">
             <h3 className="text-2xl font-display text-primary tracking-widest mb-3 border-b border-border pb-2">FUNCIONAL KIDS</h3>
             <p className="flex justify-between text-lg"><span className="text-muted-foreground">Seg e Qua:</span> <span className="text-white">19:00</span></p>
+          </div>
+
+          <div className="bg-background border-2 border-primary/50 p-5 rounded-lg relative">
+            <span className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5 rounded-full">OFERTA</span>
+            <h3 className="text-2xl font-display text-primary tracking-widest mb-3 border-b border-primary/30 pb-2">FUNCIONAL ADULTO</h3>
+            <p className="text-muted-foreground text-base">Consulte a disponibilidade de horários pelo WhatsApp.</p>
           </div>
         </div>
 

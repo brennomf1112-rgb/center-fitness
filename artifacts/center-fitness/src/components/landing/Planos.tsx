@@ -10,7 +10,7 @@ function waLink(msg: string) {
 }
 
 const LINKS = {
-  oferta150: waLink("Olá! Tenho interesse na OFERTA Musculação + Modalidade por R$ 150,00/mês (Musculação + Muay Thai, Karatê, Jiu-Jitsu ou Funcional Kids). Pode me dar mais informações?"),
+  oferta150: waLink("Olá! Tenho interesse na OFERTA Musculação + Modalidade por R$ 150,00/mês (Musculação + Muay Thai, Karatê, Jiu-Jitsu, Funcional Kids ou Funcional Adulto). Pode me dar mais informações?"),
   mensal: waLink("Olá! Tenho interesse no Plano Mensal de Musculação (R$ 105,00 cartão / R$ 100,00 Pix). Pode me dar mais informações?"),
   trimestral: waLink("Olá! Tenho interesse no Plano Trimestral de Musculação (até 3x de R$ 95,00). Pode me dar mais informações?"),
   semestral: waLink("Olá! Tenho interesse no Plano Semestral de Musculação (até 5x de R$ 105,40 ou valor à vista no Pix/dinheiro). Pode me dar mais informações?"),
@@ -18,6 +18,7 @@ const LINKS = {
   jiujitsu: waLink("Olá! Tenho interesse no Plano de Jiu-Jitsu por R$ 85,00/mês. Pode me dar mais informações?"),
   muaythai: waLink("Olá! Tenho interesse no Plano de Muay Thai por R$ 85,00/mês. Pode me dar mais informações?"),
   kids: waLink("Olá! Tenho interesse no Plano de Funcional Kids por R$ 85,00/mês. Pode me dar mais informações?"),
+  funcionalAdulto: waLink("Olá! Tenho interesse no Plano de Funcional Adulto por R$ 85,00/mês. Pode me dar mais informações? ⚡"),
   diaria: waLink("Olá! Tenho interesse na diária da academia (R$ 20,00). Pode me dar mais informações?"),
   semanal: waLink("Olá! Tenho interesse no pacote semanal (R$ 50,00). Pode me dar mais informações?"),
   quinzena: waLink("Olá! Tenho interesse no pacote de 2 semanas (R$ 75,00). Pode me dar mais informações?"),
@@ -54,7 +55,7 @@ export default function Planos() {
                 MUSCULAÇÃO +<br />QUALQUER MODALIDADE
               </h3>
               <p className="text-muted-foreground text-lg font-sans">
-                Musculação + Muay Thai, Karatê, Jiu-Jitsu ou Funcional Kids
+                Musculação + Muay Thai, Karatê, Jiu-Jitsu, Funcional Kids ou Funcional Adulto
               </p>
             </div>
 
@@ -136,6 +137,7 @@ export default function Planos() {
                 { label: "Jiu-Jitsu", price: "R$ 85,00/mês", link: LINKS.jiujitsu, testid: "btn-avulso-jiujitsu" },
                 { label: "Muay Thai", price: "R$ 85,00/mês", link: LINKS.muaythai, testid: "btn-avulso-muaythai" },
                 { label: "Funcional Kids", price: "R$ 85,00/mês", link: LINKS.kids, testid: "btn-avulso-kids" },
+                { label: "Funcional Adulto", price: "R$ 85,00/mês", link: LINKS.funcionalAdulto, testid: "btn-avulso-funcional-adulto" },
               ].map((item) => (
                 <li key={item.label}>
                   <a
