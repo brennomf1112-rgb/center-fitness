@@ -6,27 +6,27 @@ const PARCEIROS = [
   {
     name: "Atacadão do Vale",
     logo: "/parceiros/atacadao-clean.png",
-    imgClass: "scale-[1.6]",
+    imgClass: "scale-[1.85]",
   },
   {
     name: "Laca Saúde",
     logo: "/parceiros/laca-saude-hq.png",
-    imgClass: "",
+    imgClass: "scale-[1.2]",
   },
   {
     name: "Porto Seguro Supermercados",
     logo: "/parceiros/porto-seguro-new.png",
-    imgClass: "scale-[1.65]",
+    imgClass: "scale-[1.85]",
   },
   {
     name: "Supermercado Pinheiro",
     logo: "/parceiros/pinheiro.png",
-    imgClass: "scale-[1.65]",
+    imgClass: "scale-[1.85]",
   },
   {
     name: "Amilco Home Center",
     logo: "/parceiros/amilco-original.jpg",
-    imgClass: "",
+    imgClass: "scale-[1.85]",
   },
 ];
 
