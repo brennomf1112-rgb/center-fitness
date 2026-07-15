@@ -19,6 +19,10 @@ const PARCEIROS = [
     name: "Supermercado Pinheiro",
     logo: "/parceiros/pinheiro.png",
   },
+  {
+    name: "Parceiro",
+    logo: "/parceiros/novo-parceiro.png",
+  },
 ];
 
 export default function Parceiros() {
@@ -29,7 +33,7 @@ export default function Parceiros() {
           Parceiros da Academia
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-items-center mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center mb-12">
           {PARCEIROS.map((p) => (
             <div
               key={p.name}
