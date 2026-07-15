@@ -9,7 +9,7 @@ const PARCEIROS = [
   },
   {
     name: "Laca Saúde",
-    logo: "/parceiros/laca-saude-clean.png",
+    logo: "/parceiros/laca-saude-hq.png",
   },
   {
     name: "Porto Seguro Supermercados",
