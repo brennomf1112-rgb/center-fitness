@@ -6,7 +6,7 @@ const PARCEIROS = [
   {
     name: "Atacadão do Vale",
     logo: "/parceiros/atacadao-clean.png",
-    imgClass: "scale-[1.35]",
+    imgClass: "scale-[1.6]",
   },
   {
     name: "Laca Saúde",
@@ -16,12 +16,12 @@ const PARCEIROS = [
   {
     name: "Porto Seguro Supermercados",
     logo: "/parceiros/porto-seguro-new.png",
-    imgClass: "scale-[1.4]",
+    imgClass: "scale-[1.65]",
   },
   {
     name: "Supermercado Pinheiro",
     logo: "/parceiros/pinheiro.png",
-    imgClass: "scale-[1.4]",
+    imgClass: "scale-[1.65]",
   },
   {
     name: "Amilco Home Center",
