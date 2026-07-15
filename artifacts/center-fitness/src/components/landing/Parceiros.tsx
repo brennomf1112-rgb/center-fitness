@@ -6,22 +6,27 @@ const PARCEIROS = [
   {
     name: "Atacadão do Vale",
     logo: "/parceiros/atacadao-clean.png",
+    imgClass: "scale-[1.35]",
   },
   {
     name: "Laca Saúde",
     logo: "/parceiros/laca-saude-hq.png",
+    imgClass: "",
   },
   {
     name: "Porto Seguro Supermercados",
     logo: "/parceiros/porto-seguro-new.png",
+    imgClass: "scale-[1.4]",
   },
   {
     name: "Supermercado Pinheiro",
     logo: "/parceiros/pinheiro.png",
+    imgClass: "scale-[1.4]",
   },
   {
     name: "Amilco Home Center",
     logo: "/parceiros/amilco-original.jpg",
+    imgClass: "",
   },
 ];
 
@@ -52,7 +57,7 @@ export default function Parceiros() {
                 <img
                   src={p.logo}
                   alt={`Logo ${p.name}`}
-                  className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className={`max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300 group-hover:brightness-95 ${p.imgClass}`}
                 />
               </div>
               <p className="text-white/70 font-sans text-xs text-center tracking-wide leading-snug group-hover:text-white transition-colors">
