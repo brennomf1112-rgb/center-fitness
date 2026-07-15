@@ -40,19 +40,19 @@ export default function Parceiros() {
           <h2 className="text-3xl md:text-4xl font-display tracking-widest text-white">NOSSOS PARCEIROS</h2>
         </div>
 
-        {/* Grid de logos — cada um num card branco/claro */}
+        {/* Grid de logos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mb-14">
           {PARCEIROS.map((p) => (
             <div
               key={p.name}
-              className="flex flex-col items-center gap-4 group"
+              className="flex flex-col items-center gap-3 group"
             >
-              {/* Card branco para o logo aparecer bem */}
-              <div className="w-full bg-white rounded-lg p-1 flex items-center justify-center aspect-[3/2] shadow-md group-hover:shadow-[0_0_24px_rgba(245,196,0,0.25)] group-hover:ring-2 group-hover:ring-primary/40 transition-all duration-300">
+              {/* Card branco — tamanho idêntico para todos */}
+              <div className="w-full h-28 bg-white rounded-xl p-3 flex items-center justify-center shadow-md overflow-hidden group-hover:shadow-[0_0_24px_rgba(245,196,0,0.3)] group-hover:ring-2 group-hover:ring-primary/40 transition-all duration-300">
                 <img
                   src={p.logo}
                   alt={`Logo ${p.name}`}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <p className="text-white/70 font-sans text-xs text-center tracking-wide leading-snug group-hover:text-white transition-colors">
