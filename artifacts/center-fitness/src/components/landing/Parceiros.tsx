@@ -48,7 +48,7 @@ export default function Parceiros() {
               className="flex flex-col items-center gap-4 group"
             >
               {/* Card branco para o logo aparecer bem */}
-              <div className="w-full bg-white rounded-xl p-2 flex items-center justify-center aspect-[3/2] shadow-md group-hover:shadow-[0_0_24px_rgba(245,196,0,0.25)] group-hover:ring-2 group-hover:ring-primary/40 transition-all duration-300">
+              <div className="w-full bg-white rounded-lg p-1 flex items-center justify-center aspect-[3/2] shadow-md group-hover:shadow-[0_0_24px_rgba(245,196,0,0.25)] group-hover:ring-2 group-hover:ring-primary/40 transition-all duration-300">
                 <img
                   src={p.logo}
                   alt={`Logo ${p.name}`}
