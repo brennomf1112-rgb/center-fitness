@@ -11,7 +11,7 @@ const PARCEIROS = [
   {
     name: "Laca Saúde",
     logo: "/parceiros/laca-saude-hq.png",
-    imgClass: "scale-[1.2]",
+    imgClass: "",
   },
   {
     name: "Porto Seguro Supermercados",
