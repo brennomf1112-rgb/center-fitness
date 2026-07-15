@@ -27,15 +27,20 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Install dependencies
         run: |
           cd artifacts/center-fitness
-          npm install
+          pnpm install --no-frozen-lockfile
 
       - name: Build site
         run: |
           cd artifacts/center-fitness
-          npm run build
+          pnpm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
