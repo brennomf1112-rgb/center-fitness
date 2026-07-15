@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "QXhqv_PEH-FPaAR3oKW0N"
+uri = "file://center-fitness-site.zip"
+type = "unspecified"
+title = "Center Fitness — Código Completo"
