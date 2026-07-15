@@ -20,7 +20,7 @@ const PARCEIROS = [
     logo: "/parceiros/pinheiro.png",
   },
   {
-    name: "Parceiro",
+    name: "Amilco Home Center",
     logo: "/parceiros/novo-parceiro.png",
   },
 ];
