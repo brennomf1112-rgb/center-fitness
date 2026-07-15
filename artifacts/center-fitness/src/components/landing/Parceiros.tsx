@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const PARCEIROS = [
   {
     name: "Atacadão do Vale",
-    logo: "/parceiros/atacadao.png",
+    logo: "/parceiros/atacadao-clean.png",
   },
   {
     name: "Laca Saúde",
@@ -21,7 +21,7 @@ const PARCEIROS = [
   },
   {
     name: "Amilco Home Center",
-    logo: "/parceiros/novo-parceiro.png",
+    logo: "/parceiros/amilco-original.jpg",
   },
 ];
 
